@@ -65,12 +65,15 @@ async function stop(code = 0) {
   stopping = true;
   proxy.close();
   killGroup('SIGTERM');
-  if (!childExited) await Promise.race([once(child, 'exit'), delay(5000)]);
+  // Cube's terminal stop escalates from HUP to TERM, then KILL after 2.25s.
+  // Finish our detached group cleanup before that final signal can end us.
+  if (!childExited) await Promise.race([once(child, 'exit'), delay(1250)]);
   killGroup('SIGKILL');
   process.exit(code);
 }
 process.on('SIGTERM', () => void stop());
 process.on('SIGINT', () => void stop());
+process.on('SIGHUP', () => void stop());
 child.on('error', () => { childExited = true; console.error('Unable to launch OpenWork. Run its install step.'); void stop(1); });
 child.on('exit', code => { childExited = true; if (!stopping) { console.error(`OpenWork exited (${code ?? 'signal'}).`); void stop(1); } });
 try {

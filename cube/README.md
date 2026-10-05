@@ -34,6 +34,7 @@ This installs six MIT frontend workspace packages, builds the production UI, che
 node --test cube/proxy.test.mjs
 CUBE_OPENWORK_CACHE_DIR=/tmp/cube-openwork-runtime node cube/install.mjs
 CUBE_OPENWORK_CACHE_DIR=/tmp/cube-openwork-runtime node cube/smoke.mjs
+CUBE_OPENWORK_CACHE_DIR=/tmp/cube-openwork-runtime CUBE_OPENWORK_SMOKE_STOP_SIGNAL=SIGHUP node cube/smoke.mjs
 ```
 
 The smoke test isolates XDG state while retaining `HOME`, checks the production UI/API, persistent workspace and internal tokens across restart, and verifies that all owned processes exit. Set `CUBE_OPENWORK_PLAYWRIGHT` to a Playwright module path to also render the UI in installed Chrome. `CUBE_OPENWORK_SCREENSHOT` selects the screenshot output. Smoke tests never submit an inference request.

@@ -35,7 +35,7 @@ async function start() {
 }
 async function stop() {
   if (!child || child.exitCode !== null) return;
-  const exited = once(child, 'exit'); child.kill('SIGTERM');
+  const exited = once(child, 'exit'); child.kill(process.env.CUBE_OPENWORK_SMOKE_STOP_SIGNAL || 'SIGTERM');
   await Promise.race([exited, delay(8000).then(() => { throw new Error('Adapter did not stop.'); })]);
   assert.equal(child.exitCode, 0);
 }
