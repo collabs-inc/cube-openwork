@@ -161,9 +161,6 @@ importers:
       '@opencode-ai/sdk':
         specifier: ^1.18.15
         version: 1.18.18
-      '@openwork-ee/telemetry-contracts':
-        specifier: workspace:*
-        version: link:../../ee/packages/telemetry-contracts
       '@openwork/browser-tabs':
         specifier: workspace:*
         version: link:../../packages/browser-tabs

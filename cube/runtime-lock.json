@@ -1,0 +1,27 @@
+{
+  "upstream": "78f8b5cb1debc5fcd36cd0eecb7cabc84da902f2",
+  "version": "0.18.56",
+  "server": {
+    "url": "https://registry.npmjs.org/openwork-server/-/openwork-server-0.18.56.tgz",
+    "integrity": "sha512-SOdpCvTXhrN9a1I2Be0d9p7FygSQQR7almDn7p08nX9qHDJiUMrs1n/mnl+a1K0bGvMSpuFczzUzovqPVtdcsg=="
+  },
+  "jsoncParser": {
+    "url": "https://registry.npmjs.org/jsonc-parser/-/jsonc-parser-3.3.1.tgz",
+    "integrity": "sha512-HUgH65KyejrUFPvHFPbqOY0rsFip3Bo5wb4ngvdi1EpCYWUQDC5V+Y7mZws+DLkr4M//zQJoanu1SP+87Dv1oQ=="
+  },
+  "engineVersion": "1.18.30",
+  "engines": {
+    "linux-x64": {
+      "url": "https://github.com/anomalyco/opencode/releases/download/v1.18.30/opencode-linux-x64-baseline.tar.gz",
+      "integrity": "sha256-60c92147d0d86ca606dda8a77260d3c87e0ef959eb2d8dbffb34df6d8a64e063"
+    },
+    "linux-arm64": {
+      "url": "https://github.com/anomalyco/opencode/releases/download/v1.18.30/opencode-linux-arm64.tar.gz",
+      "integrity": "sha256-4111a55c2a02c0fac314bd51e9a2330280e6d29d2b85b9554fff6d62612566ed"
+    },
+    "darwin-arm64": {
+      "url": "https://github.com/anomalyco/opencode/releases/download/v1.18.30/opencode-darwin-arm64.zip",
+      "integrity": "sha256-a5e43d6887386efc7d68ce49ae28e3bbdfdee3dfd1d7169b612c3ce67e53b1e8"
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "name": "OpenWork",
+  "description": "An open-source AI workspace for files, conversations and tools, powered by OpenCode. Configure a model provider in OpenWork.",
+  "icon": "apps/app/public/openwork-logo-square.svg",
+  "platforms": ["linux"],
+  "install": "node cube/install.mjs",
+  "start": "node cube/start.mjs"
+}
